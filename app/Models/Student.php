@@ -13,6 +13,8 @@ class Student extends Model
     protected $fillable = ['name','phone_number','car_id'];
     protected $guarded = [];
 
+    protected $with = ['car'];
+
     public function Car()
     {
         return $this->belongsTo(Car::class);

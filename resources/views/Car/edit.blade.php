@@ -12,7 +12,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">name car:</label>
-                    <input type="text" class="form-control" name="Car" aria-describedby="emailHelp" value="{{$Car->car}}">
+                    <input type="text" class="form-control" name="car" aria-describedby="emailHelp" value="{{$Car->car}}">
                 </div>
 
                 <!-- select untuk brand  -->

@@ -15,8 +15,11 @@ class InstructorController extends Controller
      */
     public function index()
     {
-        $Instructor = Instructor::with('student')->paginate(10);
-        return view('Instructor.index',compact(['Instructor']));
+        // $Instructor = Instructor::with('student')->paginate(10);
+        // return view('Instructor.index',compact(['Instructor']));
+        return view('Instructor.index',[
+            'instructor' => Instructor::latest()->paginate(10)
+        ]);
     }
 
     /**
@@ -28,7 +31,7 @@ class InstructorController extends Controller
     {
         // return view('Instructor.Create');
         $student = Student::all();
-        return view('Instructor.Create',compact('student'));
+        return view('Instructor.create',compact('student'));
     }
 
     /**
@@ -41,9 +44,9 @@ class InstructorController extends Controller
     {
         // Instructor::create($request->except(['_token','submit']));
         // return redirect('/Instructor');
-        Student::create([
-            'name' => $request->name,
-            'phone_number' => $request->phone_number,
+        Instructor::create([
+            'nameIns' => $request->nameIns,
+            'phone_numberIns' => $request->phone_numberIns,
             'student_id' => $request->student_id,
         ]);
         return redirect('/Instructor');
@@ -70,7 +73,7 @@ class InstructorController extends Controller
     {
         // $Instructor = Instructor::find($id);
         // return view('Instructor.edit',compact(['Instructor']));
-        $Instructor = Instructor::find($id);
+        $instructor = Instructor::find($id);
         return view('Instructor.edit', [
             'student' => Student::all()
         ]);
@@ -85,8 +88,8 @@ class InstructorController extends Controller
      */
     public function update($id, Request $request)
     {
-        $Instructor = Instructor::find($id);
-        $Instructor->update($request->except(['_token','submit']));
+        $instructor = Instructor::find($id);
+        $instructor->update($request->except(['_token','submit']));
         return redirect('/Instructor');
     }
 
@@ -98,8 +101,8 @@ class InstructorController extends Controller
      */
     public function destroy($id)
     {
-        $Instructor = Instructor::find($id);
-        $Instructor->delete();
+        $instructor = Instructor::find($id);
+        $instructor->delete();
         return redirect('/Instructor');
     }
 }

@@ -19,15 +19,12 @@
                         <th>student</th>
                         <th>action</th>
                         </tr>
-                        @foreach($Instructor as $i)
+                        @foreach($instructor as $i)
                         <tr>
                             <td>{{$i->id}}</td>
-                            <td>{{$i->name}}</td>
-                            <td>{{$i->phone_number}}</td>
-                            
-                            @foreach($Instructor->student as $s)
-                            <td>{{$s->student->student}}</td>
-                            @endforeach
+                            <td>{{$i->nameIns}}</td>
+                            <td>{{$i->phone_numberIns}}</td>
+                            <td>{{$i->student->name}}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a class="btn btn-info" href="/Instructor/{{$i->id}}/edit">edit</a>

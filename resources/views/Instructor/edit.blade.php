@@ -12,11 +12,11 @@
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">name :</label>
-                    <input type="text" class="form-control" name="name" aria-describedby="emailHelp" value="{{$Instructor->name}}">
+                    <input type="text" class="form-control" name="nameIns" aria-describedby="emailHelp" value="{{$instructor->name}}">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">phone number :</label>
-                    <input type="text" class="form-control" name="phone_number" aria-describedby="emailHelp" value="{{$Instructor->phone_number}}">
+                    <input type="text" class="form-control" name="phone_numberIns" aria-describedby="emailHelp" value="{{$instructor->phone_number}}">
                 </div>
                 <div>
                 <select class="form-select" aria-label="Default select example" name="student_id" id="student_id">

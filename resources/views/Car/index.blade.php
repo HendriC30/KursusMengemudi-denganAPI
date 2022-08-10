@@ -18,7 +18,7 @@
                         <th>brand</th>
                         <th>action</th>
                         </tr>
-                        @foreach($Car as $c)
+                        @foreach($car as $c)
                         <tr>
                             <td>{{$c->id}}</td>
                             <td>{{$c->car}}</td>

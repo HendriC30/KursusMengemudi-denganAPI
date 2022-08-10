@@ -24,10 +24,7 @@
                             <td>{{$s->id}}</td>
                             <td>{{$s->name}}</td>
                             <td>{{$s->phone_number}}</td>
-                            
-                            @foreach($Student->car as $c)
-                            <td>{{$c->car->car}}</td>
-                            @endforeach
+                            <td>{{$s->car->car}}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a class="btn btn-info" href="/Student/{{$s->id}}/edit">edit</a>

@@ -17,8 +17,9 @@ class StudentController extends Controller
     {
         // $Student = Student::all();
         // return view('Student.index',compact(['Student']));
-        $Student = Student::with('car')->paginate(10);
-        return view('Student.index',compact(['Student']));
+        return view('Student.index', [
+            'Student' => Student::latest()->paginate(10)
+        ]);
     }
 
     /**

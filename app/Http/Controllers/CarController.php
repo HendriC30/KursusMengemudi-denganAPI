@@ -15,8 +15,8 @@ class CarController extends Controller
      */
     public function index()
     {
-        $Car = Car::with('brand')->paginate(10);
-        return view('Car.index',compact(['Car']));
+        $car = Car::with('brand')->paginate(10);
+        return view('Car.index',compact(['car']));
     }
 
     /**
@@ -27,7 +27,7 @@ class CarController extends Controller
     public function create()
     {
         $brand = Brand::all();
-        return view('Car.Create',compact('brand'));
+        return view('Car.create',compact('brand'));
     }
 
     /**
@@ -66,7 +66,7 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-        $Car = Car::find($id);
+        $car = Car::find($id);
         return view('Car.edit', [
             'brand' => Brand::all()
         ]);
@@ -81,8 +81,8 @@ class CarController extends Controller
      */
     public function update($id, Request $request)
     {
-        $Car = Car::find($id);
-        $Car->update($request->except(['_token','submit']));
+        $car = Car::find($id);
+        $car->update($request->except(['_token','submit']));
         return redirect('/Car');
     }
 
@@ -94,8 +94,8 @@ class CarController extends Controller
      */
     public function destroy($id)
     {
-        $Car = Car::find($id);
-        $Car->delete();
+        $car = Car::find($id);
+        $car->delete();
         return redirect('/Car');
     }
 }

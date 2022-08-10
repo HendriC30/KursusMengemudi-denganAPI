@@ -19,7 +19,7 @@
                         <th>student</th>
                         <th>action</th>
                         </tr>
-                        @foreach($instructor as $i)
+                        @foreach($Instructor as $i)
                         <tr>
                             <td>{{$i->id}}</td>
                             <td>{{$i->nameIns}}</td>

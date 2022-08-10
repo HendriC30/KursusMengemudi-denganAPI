@@ -18,7 +18,7 @@ class InstructorController extends Controller
         // $Instructor = Instructor::with('student')->paginate(10);
         // return view('Instructor.index',compact(['Instructor']));
         return view('Instructor.index',[
-            'instructor' => Instructor::latest()->paginate(10)
+            'Instructor' => Instructor::latest()->paginate(10)
         ]);
     }
 
@@ -73,7 +73,7 @@ class InstructorController extends Controller
     {
         // $Instructor = Instructor::find($id);
         // return view('Instructor.edit',compact(['Instructor']));
-        $instructor = Instructor::find($id);
+        $Instructor = Instructor::find($id);
         return view('Instructor.edit', [
             'student' => Student::all()
         ]);
@@ -88,8 +88,8 @@ class InstructorController extends Controller
      */
     public function update($id, Request $request)
     {
-        $instructor = Instructor::find($id);
-        $instructor->update($request->except(['_token','submit']));
+        $Instructor = Instructor::find($id);
+        $Instructor->update($request->except(['_token','submit']));
         return redirect('/Instructor');
     }
 
@@ -101,8 +101,8 @@ class InstructorController extends Controller
      */
     public function destroy($id)
     {
-        $instructor = Instructor::find($id);
-        $instructor->delete();
+        $Instructor = Instructor::find($id);
+        $Instructor->delete();
         return redirect('/Instructor');
     }
 }

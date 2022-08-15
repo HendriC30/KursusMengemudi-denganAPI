@@ -71,11 +71,10 @@ class StudentController extends Controller
      */
     public function edit($id)
     {
-        // $Student = Student::find($id);
-        // return view('Student.edit',compact(['Student']));
-        $Student = Student::find($id);
+        $Student = Student::findorfail($id);
         return view('Student.edit', [
-            'car' => Car::all()
+            'Student' => $Student,
+            'cars' => Car::latest()->get()
         ]);
     }
 

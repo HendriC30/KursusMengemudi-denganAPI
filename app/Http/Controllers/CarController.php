@@ -66,9 +66,10 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-        $car = Car::find($id);
+        $car = Car::findorfail($id);
         return view('Car.edit', [
-            'brand' => Brand::all()
+            'car' => $car,
+            'brands' => Brand::latest()->get()
         ]);
     }
 

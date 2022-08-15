@@ -71,11 +71,10 @@ class InstructorController extends Controller
      */
     public function edit($id)
     {
-        // $Instructor = Instructor::find($id);
-        // return view('Instructor.edit',compact(['Instructor']));
-        $Instructor = Instructor::find($id);
-        return view('Instructor.edit', [
-            'student' => Student::all()
+        $Instructor = Instructor::findorfail($id);
+        return view('Instructor.edit',[
+            'Instructor' => $Instructor,
+            'students' => Student::latest()->get()
         ]);
     }
 

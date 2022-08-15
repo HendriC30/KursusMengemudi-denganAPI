@@ -20,7 +20,11 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body class="body2 bg-secondary.bg-gradient">
+<body>
+    <div class="bg-image" 
+        style="background-image: url('/img/bg4.jpg');
+                height: 100vh; background-size: cover;">
+   
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -100,6 +104,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

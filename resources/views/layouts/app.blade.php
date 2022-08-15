@@ -21,6 +21,9 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
+    <div class="bg-image" 
+        style="background-image: url('/img/bg2.jpg');
+                height: 100vh; background-size: cover;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -35,25 +38,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                     </ul>
-
-                    <!-- tombol nav baru -->
-                    <!-- <nav class="navbar navbar-expand-lg">
-                        <div class="container-fluid">
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="/Student">Student</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Car">Car</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Instructor">Instructor</a>
-                                </li>
-                            </ul>
-                        </div>
-                        </div>
-                    </nav> -->
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
@@ -98,6 +82,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

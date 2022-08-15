@@ -20,6 +20,7 @@ use App\Http\Controllers\InstructorController;
 Route::get('/', function () {
     return view('welcome');
 });
+
 route::middleware(['auth'])->group(function(){
     route::get('/Student',[StudentController::class,'index']);
     route::get('/Student/create',[StudentController::class,'create']);

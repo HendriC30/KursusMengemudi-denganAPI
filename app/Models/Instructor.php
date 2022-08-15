@@ -10,7 +10,7 @@ class Instructor extends Model
     use HasFactory;
 
     protected $primarykey = 'id';
-    protected $fillable = ['nameIns','phone_numberIns','student_id'];
+    protected $fillable = ['name','phone_number','student_id'];
     protected $guarded = [];
 
     protected $with = ['student'];

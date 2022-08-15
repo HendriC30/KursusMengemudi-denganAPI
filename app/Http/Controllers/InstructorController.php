@@ -45,8 +45,8 @@ class InstructorController extends Controller
         // Instructor::create($request->except(['_token','submit']));
         // return redirect('/Instructor');
         Instructor::create([
-            'nameIns' => $request->nameIns,
-            'phone_numberIns' => $request->phone_numberIns,
+            'name' => $request->name,
+            'phone_number' => $request->phone_number,
             'student_id' => $request->student_id,
         ]);
         return redirect('/Instructor');

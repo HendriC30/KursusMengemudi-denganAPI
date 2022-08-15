@@ -37,7 +37,7 @@
                     </ul>
 
                     <!-- tombol nav baru -->
-                    <nav class="navbar navbar-expand-lg">
+                    <!-- <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
@@ -53,7 +53,7 @@
                             </ul>
                         </div>
                         </div>
-                    </nav>
+                    </nav> -->
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">

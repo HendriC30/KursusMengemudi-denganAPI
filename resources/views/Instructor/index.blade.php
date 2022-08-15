@@ -22,8 +22,8 @@
                         @foreach($Instructor as $i)
                         <tr>
                             <td>{{$i->id}}</td>
-                            <td>{{$i->nameIns}}</td>
-                            <td>{{$i->phone_numberIns}}</td>
+                            <td>{{$i->name}}</td>
+                            <td>{{$i->phone_number}}</td>
                             <td>{{$i->student->name}}</td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">

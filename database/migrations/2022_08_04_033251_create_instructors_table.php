@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('instructors', function (Blueprint $table) {
             $table->id();
-            $table->string('nameIns');
-            $table->string('phone_numberIns');
+            $table->string('name');
+            $table->string('phone_number');
             $table->bigInteger('student_id');
             $table->timestamps();
         });

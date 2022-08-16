@@ -84,7 +84,7 @@ class CarController extends Controller
     {
         $car = Car::find($id);
         $car->update($request->except(['_token','submit']));
-        return redirect('/Car');
+        return redirect('/Car')->with('success','data car berhasil ditambahkan');
     }
 
     /**

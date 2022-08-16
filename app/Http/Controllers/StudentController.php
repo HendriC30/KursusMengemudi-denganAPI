@@ -89,7 +89,7 @@ class StudentController extends Controller
     {
         $Student = Student::find($id);
         $Student->update($request->except(['_token','submit']));
-        return redirect('/Student');
+        return redirect('/Student')->with('success','data student berhasil ditambahkan');
     }
 
     /**

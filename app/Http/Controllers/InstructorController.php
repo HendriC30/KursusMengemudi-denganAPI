@@ -89,7 +89,7 @@ class InstructorController extends Controller
     {
         $Instructor = Instructor::find($id);
         $Instructor->update($request->except(['_token','submit']));
-        return redirect('/Instructor');
+        return redirect('/Instructor')->with('success','data instructor berhasil ditambahkan');
     }
 
     /**

@@ -31,7 +31,7 @@
                                     <form action="/Student/{{$s->id}}" method="POST">
                                         @csrf
                                         @method('delete')
-                                        <input class="btn btn-danger" type="submit" value="delete">
+                                        <input class="btn btn-danger" type="submit" value="delete" onclick="return confirm('Hapus data?')">
                                     </form>
                                 </div>
                             </td>

@@ -25,7 +25,7 @@
                 </select>
                 </div>
                     <a href="/Car"><button type="button" class="btn btn-secondary">back</button></a>
-                    <input class="btn btn-success" type="submit" name="submit" value="update">
+                    <input class="btn btn-success" type="submit" name="submit" value="update" onclick="return confirm('update data?')">
                 </form>
             </div>
         </div>
